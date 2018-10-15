@@ -1,0 +1,25 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+
+<div id="inbox">
+<ul>
+  {{#each model as |email|}}
+  <li>
+    {{#link-to "email" email.id}}
+    <strong>From: {{email.from}}</strong> {{email.message}}
+    {{/link-to}}
+  </li>
+  {{/each}}
+</ul>
+
+<div id="compose">
+{{#link-to "compose"}}
+<i class="fa fa-envelope fa-lg"></i>
+{{/link-to}}
+</div>
+
+</div>
+{{outlet}}
