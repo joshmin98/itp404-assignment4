@@ -26,27 +26,49 @@ nav li a:hover {
     margin-left: 15%;
 }
 
+#inbox h3 {
+    margin-left: 2%;
+}
+
 #inbox ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-#inbox li a {
-    display: block;
-    color: #000;
+#inbox li {
     padding: 8px 16px;
-    text-decoration: none;
+    display: block;
     width: 90%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-/* Change the link color on hover */
+#inbox li a {
+    color: #000;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
 #inbox li a:hover {
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+#inbox li:hover {
     background-color: #555;
     color: white;
+}
+
+#inbox li span {
+    font-size: 20px;
+}
+
+#inbox li span:hover {
+    cursor: pointer;
 }
 
 #email {
@@ -97,4 +119,8 @@ nav li a:hover {
   -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
      -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
           box-sizing: border-box;
+}
+
+.starred {
+    color: khaki;
 }
