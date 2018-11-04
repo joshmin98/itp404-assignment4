@@ -5,11 +5,11 @@
 
 <div id="email">
   <i class="fa fa-arrow-left fa-lg" onclick={{action "toIndex"}}></i>
-  <i class="fa fa-trash fa-lg" onclick={{action "deleteEmail" model}}></i>
-  <h1>{{model.subject}}</h1>
+  <i id="delete" class="fa fa-trash fa-lg" onclick={{action "deleteEmail" model}}></i>
+  <h1 data-test="subject">{{model.subject}}</h1>
   <ul>
-    <li>To: {{model.to}}</li>
-    <li>From: {{model.from}}</li>
+    <li data-test="to">To: {{model.to}}</li>
+    <li data-test="from">From: {{model.from}}</li>
   </ul>
-  <p>{{model.message}}</p>
+  <p data-test="message">{{model.message}}</p>
 </div>

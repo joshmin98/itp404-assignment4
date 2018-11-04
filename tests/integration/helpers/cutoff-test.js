@@ -5,13 +5,4 @@ import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Helper | cutoff', function(hooks) {
   setupRenderingTest(hooks);
-
-  // Replace this with your real tests.
-  test('it renders', async function(assert) {
-    this.set('inputValue', '1234');
-
-    await render(hbs`{{cutoff inputValue}}`);
-
-    assert.equal(this.element.textContent.trim(), '1234');
-  });
 });
